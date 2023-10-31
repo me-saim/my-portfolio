@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="javascriptreact">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio of shivam</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Kanit&family=Playpen+Sans:wght@800&family=Poppins:ital@0;1&family=Sedgwick+Ave+Display&display=swap');
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: 'Space Grotesk', sans-serif;
+    }
+    body{
+        background-color: black;
+        color: white;
+    }
+
+    nav{
+        font-size: 30px;
+        text-align: center;
+        width: 683px;
+        height: 40px;
+        margin-left: 417px;
+        margin-top: 30px;
+    }
+    .navob{
+        text-decoration: none;
+        margin: 10px;
+        filter: drop-shadow(16px 9px 11px rgb(50, 232, 138));
+    }
+    .navob:hover{
+        background-color: rgb(99, 206, 215);
+        color: rgb(0, 0, 0);
+        border-radius: 10px;
+    }
+    header{
+        width: 1094px;
+        height: 600px;
+        margin-left: 201px;
+        margin-top: 30px;
+    }
+    .intro{
+        margin-left: 76px;
+        margin-top: 239px;
+        font-size: 70px;
+        text-align: center;
+        font-family: 'Space Grotesk', sans-serif;
+        filter: drop-shadow(4px 7px 5px purple);
+        animation: fadeout 1s;
+    }
+    .pic{
+        float: right;
+        margin-top: -378px;
+        filter: drop-shadow(16px 9px 11px black);
+        animation: fadein 1s;
+    }
+    .skill{
+        width: 1094px;
+        height: 670px;
+        margin-left: 201px;
+        margin-top: 30px;
+
+    }
+    #sk{
+        font-size: 60px;
+        margin-left: 453px;
+        margin-top: 85px;
+        filter: drop-shadow(4px 7px 5px rgb(58, 210, 236));
+    }
+    @keyframes fadeout{
+        0%{
+            opacity: 0;
+            transform:translateY(30px);
+        }
+        50%{
+            opacity: 0.5;
+            transform:translateY(15px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+    @keyframes fadein{
+        0%{
+            opacity: 0;
+            translate:30px;
+        }
+        50%{
+            opacity: 0.5;
+            translate:15px;
+        }
+        100%{
+            opacity: 1;
+            translate:0px;
+        }
+    }
+    .w{
+        width: 95px;
+        height: 71px;
+        border: 5px solid;
+        border-radius: 62px;
+        margin-left: 499px;
+        margin-top: 226px;
+        background-color: black;
+    }
+    .br1{
+        border: 5px solid;
+        border-radius: 222px;
+        width: 320px;
+        height: 286px;
+        margin-left: 386px;
+        margin-top: -171px;
+    }
+    .br2{
+        border-radius: 222px;
+        border: 5px solid;
+        width: 460px;
+        height: 420px;
+        margin-left: 303px;
+        margin-top: -358px;
+    }
+    .ob1{
+        font-size: 30px;
+        margin-top: 10px;
+        margin-left: 6px;
+        color: white;
+    }
+    .ob2{
+        font-size: 30px;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        width: 86px;
+        margin-left: 106px;
+        margin-top: -17px;
+    }
+    .ob3{
+        font-size: 30px;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        width: 64px;
+        margin-top: 124px;
+        margin-left: -29px;
+    }
+    .ob4{
+        font-size: 30px;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        width: 187px;
+        margin-left: 200px;
+    }
+    .ob5{
+        font-size: 30px;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        width: 63px;
+        margin-top: 78px;
+    }
+    .ob6{
+        font-size: 30px;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        width: 64px;
+        margin-left: 406px;
+    }
+    .ob7{
+        font-size: 30px;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        width: 83px;
+        margin-top: 178px;
+    }
+
+    @keyframes rotate{
+        from{
+            rotate: 0deg;
+        }
+        to{
+            rotate: 360deg;
+        }
+    }
+    @keyframes rotate2{
+        from{
+            rotate: 0deg;
+        }
+        to{
+            rotate: -360deg;
+        }
+    }
+
+    .project{
+        width: 1094px;
+        height: 670px;
+        margin-left: 201px;
+        margin-top: 30px;
+    }
+    .pr{
+        font-size: 50px;
+        margin: 51px;
+        filter: drop-shadow(4px 7px 5px rgb(58, 210, 236));
+        
+    }
+    .pr1{
+        border: 8px solid;
+        border-radius: 15px;
+        height: 157px;
+        width: 800px;
+        margin-left: 147px;
+        margin-top: 40px;
+        display: flex;
+        filter: drop-shadow(16px 9px 11px rgb(81, 21, 211));
+    }
+    .pc1{
+        width: 545px;
+        height: 141px;
+        border: 2px solid;
+        background-image: url(car.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .pc2{
+        width: 445px;
+        height: 141px;
+        border: 2px solid;
+        background-image: url(whatsappp.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .de{
+        margin-left: 25px;
+        margin-top: 20px;
+    }
+    .titl{
+        filter: drop-shadow(4px 7px 5px rgb(58, 210, 236));
+    }
+    .pra{
+        margin-top: 10px;
+    }
+    .pr2{
+        border: 8px solid;
+        border-radius: 15px;
+        height: 157px;
+        width: 800px;
+        margin-left: 147px;
+        margin-top: 40px;
+        display: flex;
+        filter: drop-shadow(16px 9px 11px rgb(81, 21, 211));
+        
+    }
+    .about{
+        width: 1094px;
+        height: 400px;
+        margin-left: 201px;
+        margin-top: 30px;
+    }
+    .abo{
+        font-size: 50px;
+        filter: drop-shadow(4px 7px 5px rgb(58, 210, 236));
+        margin-top: 83px;
+        text-align: center;
+    }
+    .abme{
+        text-align: center;
+        margin-top: 67px;
+    }
+    .contact{
+        width: 1094px;
+        height: 670px;
+        margin-left: 201px;
+        margin-top: 30px;
+    }
+    .container {
+    background-color: #000000de;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(39, 246, 180, 0.1);
+}
+
+form {
+    margin-top: 50px;
+    width: 600px;
+    margin-left: 197px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #514e4e;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+.ctm{
+    font-size: 40px;
+    text-align: center;
+    filter: drop-shadow(4px 7px 5px rgb(58, 210, 236));
+    margin-top: 40px;
+}
+    footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+    @media (max-width:500px){
+        nav{
+            margin-left: -9px;
+        }
+        header{
+            width: 606px;
+            height: 436px;
+            margin-left: 42px;
+        }
+        .intro{
+            margin-left: auto;
+            margin-top: 108px;
+        }
+        .pic{
+            margin-top: 40px;
+        }
+        .skill{
+            width: 606px;
+            margin-left: 42px;
+        }
+        #sk{
+            margin-left: 174px;
+        }
+        .w{
+            margin-left: 250px;
+        }
+        .br1{
+            margin-left: 150px;
+        }
+        .br2{
+            margin-left: 68px;
+        }
+        .project{
+            width: 606px;
+            margin-left: 42px;
+        }
+        .pr1{
+            width: 587px;
+            margin-left: 10px;
+        }
+        .pr2{
+            width: 587px;
+            margin-left: 10px;
+        }
+        .about{
+            width: 606px;
+            margin-left: 42px;
+        }
+        .contact{
+            width: 606px;
+            margin-left: 42px;
+        }
+        form {
+            margin-top: 50px;
+            width: 551px;
+            margin-left: 2px;
+}
+    }
+
+</style>
+<body>
+    <nav>
+            <a href="#home" class="navob">Home</a>
+            <a href="#skill" class="navob">Skill's</a>
+            <a href="#project" class="navob">Projects</a>
+            <a href="#about" class="navob">About Me</a>
+    </nav>
+    <header id="home">
+        <div class="intro">
+            <h3>I'm</h3>
+            <h2>SHIVAM</h2>
+        </div>
+    </header>
+    <main>
+        <div class="skill" id="skill">
+            <h2 id="sk">SKILL'S</h2>
+            <div class="w"><h3 class="ob1">WEB</h3></div>
+            <div class="br1" id="br1">
+                <h3 class="ob2">HTML</h3>
+                <h3 class="ob3">CSS</h3>
+                <h3 class="ob4">JAVASCRIPT</h3>
+            </div>
+            <div class="br2" id="br2">
+                <h3 class="ob5">PHP</h3>
+                <h3 class="ob6">SQL</h3>
+                <h3 class="ob7">UI/UX</h3>
+            </div>
+        </div>
+        <div class="project" id="project">
+            <h2 class="pr" id="pr">PROJECT</h2>
+            <div class="pr1" id="pr1">
+                <div class="de">
+                    <h3 class="titl" id="titl">The Car Game</h3>
+                    <p class="pra" id="pra">
+
+                       This is a simple car game made by using html,css and javascript.
+                       This game consist of two car.One car come randomly from any
+                       road and another car have to ignore the colision,if the colision 
+                       happen then game over.It also shows score of player whenever
+                       he passe the car.
+                    </p>
+                </div>
+            </div>
+            <div class="pr2" id="pr2">
+                <div class="de">
+                    <h3 class="titl" id="titl">Dummy whatsapp bot</h3>
+                    <p class="pra" id="pra">
+
+This is a whatsapp bot that based on self replying consect and it 
+work as A.I and responce to your question and talk to you.It also 
+created with the help of html,css and javascript.It also have camera
+to click images or record video.
+                    </p>
+                </div>
+            </div>
+            </div>
+
+            <div class="about" id="about">
+                <h3 class="abo" id="abo">About Me</h3>
+                <p class="abme" id="abme">"I am shivam.i'm a fullstack devloper.
+                    i have knowledge of HTML,CSS,JAVASCRIPT,PHP,SQL and also familier to framewok like 
+                    react and angular js.Always exited to get new skill and knowledge.
+                    Always try to do better than anyone.
+                    Like to work on a big project and idea."</p>
+            </div>
+            <div class="contact" id="contact">
+                <div class="container">
+                    <h1 class="ctm" id="ctm">Contact Me</h1>
+                    <form id="user-form"  action="https://formspree.io/f/xvojleqn"
+                    method="POST">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required autocomplete="off"><br>
+            
+                        <label for="email">Email:</label>
+                        <input type="email" id="address" name="email" required autocomplete="off"><br>
+            
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required autocomplete="off" ><br>
+            
+                        <label for="about">message:</label>
+                        <textarea id="message" name="message" required autocomplete="off"></textarea><br>
+            
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Student Portfolio. All rights reserved.</p>
+    </footer>
+    <script>
+        window.addEventListener('scroll',function(){
+            if(window.pageYOffset>650 && window.pageYOffset<1200){
+                document.getElementById('sk').style.animation="fadeout 1s";
+                document.getElementById('br1').style.animation="rotate 2s";
+                document.getElementById('br2').style.animation="rotate2 2s";   
+            }
+            else if(window.pageYOffset>1200 && window.pageYOffset<1850){
+                  document.getElementById('pr').style.animation="fadein 1s";
+                  document.getElementById('pr1').style.animation="fadeout 1s";
+                  document.getElementById('pr1').style.animationDelay="0.5s";
+                  document.getElementById('pr2').style.animation="fadeout 1s";
+                  document.getElementById('pr2').style.animationDelay="1s";
+
+            }
+            else if(window.pageYOffset>1850 && window.pageYOffset<2400){
+                  document.getElementById('abo').style.animation="fadein 1s";
+                  document.getElementById('abme').style.animation="fadeout 1s";
+                  document.getElementById('abme').style.animationDelay="0.5s";
+
+            }
+
+
+        })
+            
+    </script>
+</body>
+</html>
